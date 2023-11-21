@@ -7,10 +7,12 @@ import static com.codeborne.selenide.Selenide.open;
 
 @Tag("OnlyTest")
 public class RemoteTest extends TestBase{
+    private final RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
     void openQase () {
-        open("/login");
+
+        registrationPage.openPage();
         $(By.className("FzFLHc")).click();
         $(By.className("VV3w3Z")).exists();
 
